@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "notiker": {
+      "type": "streamable-http",
+      "url": "https://api.notiker.com/mcp",
+      "extensions": { "com.openai": { "auth": { "type": "oauth", "client": { "mode": "dcr" } } } }
+    }
+  }
+}

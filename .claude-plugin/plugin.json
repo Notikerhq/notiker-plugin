@@ -1,0 +1,12 @@
+{
+  "name": "notiker",
+  "displayName": "Notiker",
+  "version": "1.0.0",
+  "description": "Read, search, write and comment on your Notiker notes, and keep HTML pages there, from Claude.",
+  "author": { "name": "Notiker", "url": "https://notiker.com" },
+  "homepage": "https://notiker.com/developers",
+  "privacyPolicyUrl": "https://notiker.com/privacy",
+  "repository": "https://github.com/Notikerhq/notiker-plugin",
+  "license": "MIT",
+  "keywords": ["notes", "markdown", "knowledge base", "mcp"]
+}

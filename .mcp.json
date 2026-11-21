@@ -1,0 +1,5 @@
+{
+  "mcpServers": {
+    "notiker": { "type": "http", "url": "https://api.notiker.com/mcp" }
+  }
+}

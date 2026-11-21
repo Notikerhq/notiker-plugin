@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "notiker",
+  "version": "1.0.0",
+  "description": "Read, search, write and comment on your Notiker notes, and keep HTML pages there.",
+  "author": { "name": "Notiker", "url": "https://notiker.com" },
+  "homepage": "https://notiker.com/developers",
+  "repository": "https://github.com/Notikerhq/notiker-plugin",
+  "license": "MIT",
+  "keywords": ["notes", "markdown", "knowledge base", "mcp"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Notiker",
+        "shortDescription": "Your notes, in every chat",
+        "longDescription": "Notiker is a workspace for Markdown notes, folders and HTML pages. Connect it to search and read your notes, create and update them, leave comments, and save artifacts, dashboards and reports as pages that open running. You choose the workspace and whether changes are allowed; revoke access any time in Notiker.",
+        "developerName": "Notiker",
+        "category": "Productivity",
+        "capabilities": ["Read", "Write"],
+        "composerIcon": "./assets/logo.svg",
+        "logo": "./assets/logo.png",
+        "websiteURL": "https://notiker.com",
+        "supportURL": "https://notiker.com/support",
+        "privacyPolicyURL": "https://notiker.com/privacy",
+        "termsOfServiceURL": "https://notiker.com/terms"
+      },
+      "onboardingSkill": "./skills/notiker"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "notiker",
+  "description": "Notiker, the notes workspace, for Claude.",
+  "owner": {
+    "name": "Notiker",
+    "url": "https://notiker.com"
+  },
+  "plugins": [
+    {
+      "name": "notiker",
+      "source": "./",
+      "description": "Your Notiker notes in Claude."
+    }
+  ]
+}
