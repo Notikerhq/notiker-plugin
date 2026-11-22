@@ -19,6 +19,10 @@ The app sends your requests and the note text it writes to `https://api.notiker.
 
 [notiker.com/support](https://notiker.com/support) · [API documentation](https://notiker.com/developers)
 
+## Releasing
+
+Every pull request runs `node scripts/check.mjs` and `claude plugin validate .`. To release, bump `version` in `plugin.json` and `.claude-plugin/plugin.json`, merge, and push a tag `vX.Y.Z`. The tag publishes a GitHub release with the plugin ZIP. The Claude directory rescans `main` on its own. For ChatGPT and Codex, upload the release ZIP as a new version in the OpenAI Platform portal.
+
 ## License
 
 MIT
