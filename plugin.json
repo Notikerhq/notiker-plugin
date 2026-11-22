@@ -3,11 +3,19 @@
   "name": "notiker",
   "version": "1.0.0",
   "description": "Read, search, write and comment on your Notiker notes, and keep HTML pages there.",
-  "author": { "name": "Notiker", "url": "https://notiker.com" },
+  "author": {
+    "name": "Notiker",
+    "url": "https://notiker.com"
+  },
   "homepage": "https://notiker.com/developers",
   "repository": "https://github.com/Notikerhq/notiker-plugin",
   "license": "MIT",
-  "keywords": ["notes", "markdown", "knowledge base", "mcp"],
+  "keywords": [
+    "notes",
+    "markdown",
+    "knowledge base",
+    "mcp"
+  ],
   "extensions": {
     "com.openai": {
       "interface": {
@@ -16,7 +24,10 @@
         "longDescription": "Notiker is a workspace for Markdown notes, folders and HTML pages. Connect it to search and read your notes, create and update them, leave comments, and save artifacts, dashboards and reports as pages that open running. You choose the workspace and whether changes are allowed; revoke access any time in Notiker.",
         "developerName": "Notiker",
         "category": "Productivity",
-        "capabilities": ["Read", "Write"],
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
         "composerIcon": "./assets/logo.svg",
         "logo": "./assets/logo.png",
         "websiteURL": "https://notiker.com",
@@ -24,7 +35,57 @@
         "privacyPolicyURL": "https://notiker.com/privacy",
         "termsOfServiceURL": "https://notiker.com/terms"
       },
-      "onboardingSkill": "./skills/notiker/SKILL.md"
+      "onboardingSkill": "./skills/notiker/SKILL.md",
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "List the workspace",
+              "prompt": "What notes do I have in my Notiker workspace?",
+              "tools_triggered": "tree",
+              "expected_behavior": "Lists the folders and notes in the connected workspace, including Meetings/Weekly plan and Projects/Roadmap."
+            },
+            {
+              "description": "Search notes",
+              "prompt": "Find my Notiker notes about the product roadmap.",
+              "tools_triggered": "find",
+              "expected_behavior": "Returns Projects/Roadmap with its link."
+            },
+            {
+              "description": "Read and summarize a note",
+              "prompt": "Open my Notiker note \"Weekly plan\" and summarize it.",
+              "tools_triggered": "find, get",
+              "expected_behavior": "Finds Meetings/Weekly plan, reads it and summarizes its contents."
+            },
+            {
+              "description": "Create a note",
+              "prompt": "Save this as a new Notiker note called \"Review check\" in the Meetings folder: Decisions - ship on Friday.",
+              "tools_triggered": "create",
+              "expected_behavior": "Creates Meetings/Review check with that text and returns its notiker.com link."
+            },
+            {
+              "description": "Save an HTML page",
+              "prompt": "Make a small HTML dashboard showing tasks done: 3, open: 2, and save it in Notiker under Reports.",
+              "tools_triggered": "save_html",
+              "expected_behavior": "Saves a page named for the dashboard under Reports and returns a link that opens it running."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Unrelated question",
+              "prompt": "What's the weather in Seoul today?"
+            },
+            {
+              "description": "Creative writing with no save",
+              "prompt": "Write a haiku about autumn."
+            },
+            {
+              "description": "A different notes app",
+              "prompt": "Add a reminder to my Apple Notes to buy milk."
+            }
+          ]
+        }
+      }
     }
   }
 }
