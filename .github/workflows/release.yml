@@ -1,0 +1,21 @@
+name: Release
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: node scripts/check.mjs "$GITHUB_REF_NAME"
+      - run: npx -y @anthropic-ai/claude-code@2.1.330 plugin validate .
+      # The ZIP is what the OpenAI portal takes under Plugins → Notiker → Upload new version.
+      - run: git archive --format=zip -o "notiker-plugin-$GITHUB_REF_NAME.zip" HEAD
+      - run: gh release create "$GITHUB_REF_NAME" "notiker-plugin-$GITHUB_REF_NAME.zip" --generate-notes
+        env:
+          GH_TOKEN: ${{ github.token }}
