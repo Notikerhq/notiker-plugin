@@ -24,7 +24,7 @@
         "privacyPolicyURL": "https://notiker.com/privacy",
         "termsOfServiceURL": "https://notiker.com/terms"
       },
-      "onboardingSkill": "./skills/notiker"
+      "onboardingSkill": "./skills/notiker/SKILL.md"
     }
   }
 }
