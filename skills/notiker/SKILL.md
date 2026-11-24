@@ -20,6 +20,17 @@ Notiker holds the user's Markdown notes in folders (or nested pages) and HTML pa
 - Keep a document in one note (up to 300 KiB of Markdown) unless the user asks to split it.
 - Write only what the user asked for. Creates are not idempotent: after a failure, check whether the note exists before repeating.
 
+## Collapsible sections
+
+For a collapsible section in a Markdown note, write `> [!note]- Title` and prefix each body line with `>`, including blank lines. Lists, tables and inline code can go inside. The web and Mac editors create this block when the writer types `>` followed by Space at the start of a line. Sections start closed when the note opens, including its published copy.
+
+```markdown
+> [!note]- Hotel address
+>
+> Example Hotel, Las Vegas
+> ZIP `89109`
+```
+
 ## Telling the user
 
 Give each note you created, changed or found as a Markdown link with its title as the text and its `url` as the target. Do not show IDs or revisions.

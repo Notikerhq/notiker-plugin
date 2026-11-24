@@ -11,6 +11,10 @@ This plugin contains one skill (`skills/notiker`) and the address of Notiker's r
 
 The first use opens Notiker's connection page. Sign in, choose one workspace, and choose whether the app may create and change notes. Access lasts 90 days and can be revoked any time in Notiker under Settings → API tokens.
 
+## Writing notes
+
+Ask the plugin to put a hotel address, checklist or table in a collapsible section. It writes the section into the Markdown note. Readers can expand it when needed. [Markdown example](https://notiker.com/developers/#collapsible-sections)
+
 ## What is sent where
 
 The app sends your requests and the note text it writes to `https://api.notiker.com/mcp`, operated by Notiker, and receives the notes it reads. Sign-in uses OAuth; your password never reaches the app, and Notiker stores only a hash of the access token. What the app keeps of the notes it reads is governed by that app's own policy. See the [privacy policy](https://notiker.com/privacy) and [terms](https://notiker.com/terms).
