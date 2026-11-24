@@ -13,7 +13,7 @@ The first use opens Notiker's connection page. Sign in, choose one workspace, an
 
 ## Writing notes
 
-Ask the plugin to put a hotel address, checklist or table in a collapsible section. It writes the section into the Markdown note. Readers can expand it when needed. [Markdown example](https://notiker.com/developers/#collapsible-sections)
+Ask the plugin to put a hotel address, checklist or table in a collapsible section. It writes the section into the Markdown note. Readers can expand it when needed. [Markdown example](https://notiker.com/developers#collapsible-sections)
 
 ## What is sent where
 
