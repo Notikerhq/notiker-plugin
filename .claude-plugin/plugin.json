@@ -1,7 +1,7 @@
 {
   "name": "notiker",
   "displayName": "Notiker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Read, search, write and comment on your Notiker notes, and keep HTML pages there, from Claude.",
   "author": { "name": "Notiker", "url": "https://notiker.com" },
   "homepage": "https://notiker.com/developers",
